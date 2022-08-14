@@ -10,7 +10,7 @@ const Login = ({ loginUser, loggedIn }) => {
 
   useEffect(() => {
     if (loggedIn) {
-      // navigate('/users/:id')
+      navigate('/users/:id')
     }
   }, [loggedIn])
 
@@ -31,7 +31,7 @@ const Login = ({ loginUser, loggedIn }) => {
       .then(data => {
         loginUser(data.user);
         localStorage.setItem('jwt', data.token)
-        // navigate('/users/:id');
+        navigate('/users/:id');
       })
   }
 
