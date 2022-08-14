@@ -1,11 +1,12 @@
 class ProductLocationsController < ApplicationController
+  skip_before_action :authorized, only: [:index, :show]
   before_action :set_product_location, only: %i[ show update destroy ]
 
   # GET /product_locations
   def index
     @product_locations = ProductLocation.all
 
-    render json: @product_locations
+    render json: @product_locations, include: [:location, :product]
   end
 
   # GET /product_locations/1

@@ -1,16 +1,17 @@
 class LocationTypesController < ApplicationController
+  skip_before_action :authorized, only: [:index, :show]
   before_action :set_location_type, only: %i[ show update destroy ]
 
   # GET /location_types
   def index
     @location_types = LocationType.all
 
-    render json: @location_types
+    render json: @location_types, include: [:locations]
   end
 
   # GET /location_types/1
   def show
-    render json: @location_type
+    render json: @location_type, include: [:location]
   end
 
   # POST /location_types
