@@ -8,3 +8,5 @@ export const getToken = () => {
       'Authorization': `bearer ${ localStorage.getItem('jwt') }`
   }
 }
+
+export const baseUrl = "http://localhost:3000";

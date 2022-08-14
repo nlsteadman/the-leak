@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { headers } from './Globals';
+import { baseUrl, headers } from './Globals';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -10,7 +10,7 @@ const Signup = ({ loginUser, loggedIn }) => {
 
   useEffect(() => {
     if (loggedIn) {
-        navigate('/users/id')
+        // navigate('/users/id')
     }
   }, [loggedIn])
 
@@ -24,7 +24,7 @@ const Signup = ({ loginUser, loggedIn }) => {
         }
     }
 
-    fetch('/users', {
+    fetch(baseUrl + '/users', {
         method: "POST",
         headers,
         body: JSON.stringify(params)
@@ -33,7 +33,7 @@ const Signup = ({ loginUser, loggedIn }) => {
         .then(data => {
             loginUser(data.user);
             localStorage.setItem('jwt', data.token)
-            navigate('/users/:id');
+            // navigate('/users/:id');
         })
   }
 
