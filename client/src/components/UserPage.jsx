@@ -51,7 +51,7 @@ const UserPage = ({ currentUser, reviews, locations, loggedIn, updateReview, del
         { myList }
       </div>
       <div>
-        { reviewCards }
+        { reviewCards() }
       </div>
     </div>
 

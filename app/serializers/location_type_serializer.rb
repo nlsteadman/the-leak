@@ -1,5 +1,5 @@
 class LocationTypeSerializer < ActiveModel::Serializer
-  attributes :id, :type
+  attributes :id, :org
 
   has_many :locations
 

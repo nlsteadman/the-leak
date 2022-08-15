@@ -47,6 +47,6 @@ class LocationTypesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def location_type_params
-      params.require(:location_type).permit(:type)
+      params.require(:location_type).permit(:org)
     end
 end
