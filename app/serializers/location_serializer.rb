@@ -1,5 +1,5 @@
 class LocationSerializer < ActiveModel::Serializer
-  attributes :id, :name, :address, :hours, :location_type_id
+  attributes :id, :name, :address, :hours, :image_url, :location_type_id
 
   belongs_to :location_type
   has_many :product_locations

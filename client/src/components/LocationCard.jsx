@@ -7,7 +7,7 @@ const LocationCard = ({ location }) => {
   return (
     <div id="locationcard">
         <div id="locationimage">
-            <img src={ location.image_url } alt="location" height="450" width="300" />
+            <img src={ location.image_url } alt="location" height="450" width="400" />
         </div>
         <div id="locationinfo">
             <p>{ location.name }</p>
