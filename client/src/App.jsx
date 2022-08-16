@@ -9,12 +9,14 @@ import Navbar from "./components/Navbar";
 import LocationList from "./components/LocationList";
 import LocationDetail from "./components/LocationDetail";
 import UserPage from "./components/UserPage";
+import Product from "./components/Product";
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState({});
   const [loggedIn, setLoggedIn] = useState(false);
   const [locations, setLocations] = useState([]);
   const [reviews, setReviews] = useState([]);
+  const [products, setProducts] = useState([]);
 
 
   const loginUser = user => {
@@ -58,6 +60,17 @@ const App = () => {
       .then(data => setLocations(data))
 
     if(loggedIn) {
+      fetch('/products', {
+        headers: {
+          ...headers,
+          ...getToken()
+        }
+      })
+        .then(r => r.json())
+        .then(data => setProducts(data))
+    }  
+
+    if(loggedIn) {
       fetch('/reviews', {
         headers: {
             ...headers,
@@ -93,6 +106,7 @@ const App = () => {
           <Route path="/locations" element={<LocationList loggedIn={ loggedIn } locations={ locations } />}/>
           <Route path="/locations/:id" element={<LocationDetail loggedIn={ loggedIn } locations={ locations } reviews={ reviews } currentUser={ currentUser } addToList={ addToList } />}/>
           <Route path="/users/:id" element={<UserPage loggedIn={ loggedIn } locations={ locations } reviews={ reviews } currentUser={ currentUser } updateReview={ updateReview } deleteReview={ deleteReview } />}/>
+          <Route path="/products/:id" element={<Product loggedIn={ loggedIn } products={ products }/> } />
         </Routes>
     </Router>
   );

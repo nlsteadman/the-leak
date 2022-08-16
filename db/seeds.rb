@@ -44,7 +44,7 @@ Location.create(
   name: 'Columbia Park Summer Free Food Market',
   address: '7701 N Chautauqua Blvd, Portland, OR 97203',
   hours: 'Thurs: 1 pm - 2 pm',
-  image_url: '',
+  image_url: 'https://foodfinder.oregonfoodbank.org/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2f25def955fbf11afee42f3b0e5c5b9f4a62b085/OFB_logo.svg',
   location_type_id: LocationType.second.id
 )
 
