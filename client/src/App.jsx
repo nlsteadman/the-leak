@@ -10,6 +10,7 @@ import LocationList from "./components/LocationList";
 import LocationDetail from "./components/LocationDetail";
 import UserPage from "./components/UserPage";
 import Product from "./components/Product";
+import ReviewForm from "./components/ReviewForm";
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -107,6 +108,7 @@ const App = () => {
           <Route path="/locations/:id" element={<LocationDetail loggedIn={ loggedIn } locations={ locations } reviews={ reviews } currentUser={ currentUser } addToList={ addToList } />}/>
           <Route path="/users/:id" element={<UserPage loggedIn={ loggedIn } locations={ locations } reviews={ reviews } currentUser={ currentUser } updateReview={ updateReview } deleteReview={ deleteReview } />}/>
           <Route path="/products/:id" element={<Product loggedIn={ loggedIn } products={ products }/> } />
+          <Route path="/reviews/update/:id" element={<ReviewForm loggedIn={ loggedIn } updateReview={ updateReview }/> } />
         </Routes>
     </Router>
   );

@@ -93,7 +93,7 @@ const BookDetail = ({ loggedIn, locations, reviews, currentUser, addToList }) =>
                     { productCards }
                 </div>
                 <div id="list-button">
-                    <button onClick={ handleSubmit }>Add to my list!</button>
+                    <button onClick={ handleSubmit }>Add to my list</button>
                 </div>
             </div>
         </div>
