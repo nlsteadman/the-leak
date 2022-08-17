@@ -6,6 +6,7 @@ import { headers, getToken } from './Globals';
 
 const ReviewForm = ({ loggedIn, updateReview }) => {
   const [content, setContent] = useState("");
+  const [review, setReview] = useState([]);
   const navigate = useNavigate();
   const id = useParams();
 
@@ -14,6 +15,18 @@ const ReviewForm = ({ loggedIn, updateReview }) => {
         navigate('/login');
     }
   }, [loggedIn, navigate])
+
+  useEffect(() => {
+    fetch("/reviews/" + id.id)
+      .then(r => r.json())
+      .then(review => setReview(review))
+  }, []);
+
+  useEffect(() => {
+    if (review) {
+      setContent(review.content)
+    }
+  }, [review])
 
   const handleSubmit = e => {
       e.preventDefault();
@@ -44,7 +57,7 @@ const ReviewForm = ({ loggedIn, updateReview }) => {
 
   return (
     <div>
-      <h1 id="review-form-title">Create Review</h1>
+      <h1 id="review-form-title">Create/ Edit Review</h1>
 
       <form id="review-form" onSubmit={ handleSubmit }>
         <div>

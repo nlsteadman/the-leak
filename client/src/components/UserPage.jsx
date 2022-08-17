@@ -24,13 +24,13 @@ const UserPage = ({ currentUser, reviews, locations, loggedIn, updateReview, del
   }, [loggedIn, currentUser.id, reviews])
 
   
-  const myList = myReviews.map(review => <UserLocationCard key={ review.id } review={ review } loggedIn={ loggedIn } updateReview={ updateReview } deleteReview={ deleteReview } />)
+  const myList = myReviews.map(review => <UserLocationCard key={ review.id } review={ review } loggedIn={ loggedIn } deleteReview={ deleteReview } />)
   
 
 
   const reviewCards = () => {
     if (myReviews) {
-      return myReviews.map(review => <UserReviewCard key={ review.id } review={ review } locations={ locations } />)
+      return myReviews.map(review => <UserReviewCard key={ review.id } review={ review } locations={ locations } updateReview={ updateReview } loggedIn={ loggedIn } />)
     }
   }
 
