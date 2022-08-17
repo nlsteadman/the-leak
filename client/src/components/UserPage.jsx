@@ -37,14 +37,8 @@ const UserPage = ({ currentUser, reviews, locations, loggedIn, updateReview, del
   return (
     <div>
       <div id="user-greeting">
-        <div id="user-greeting-image">
-          <h1>*</h1>
-        </div>
         <div id="greeting">
-          <h2>Hi, { currentUser.username }!</h2>
-        </div>
-        <div id="user-greeting-image">
-          <h1>*</h1>
+          <h1>Hi, { currentUser.username }!</h1>
         </div>
       </div>
       <div>
