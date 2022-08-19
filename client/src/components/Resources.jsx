@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const Resources = () => {
   return (
     <div>
-      Other Resources:
-      <ul>
+      <h1>Other Resources:</h1>
+      <ul id="resource-links">
         <li><Link to="https://www.211.org/">211</Link></li>
         <li><Link to="https://period.org/">period.org</Link></li>
         <li><Link to="https://foodfinder.oregonfoodbank.org/">oregonfoodbank.org</Link></li>

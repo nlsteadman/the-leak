@@ -16,7 +16,7 @@ const LocationList = ({ loggedIn, locations }) => {
 
 
   return (
-    <div>
+    <div id="location-list">
       <h1 id="locations">Locations</h1>
         { locationCards }
     </div>

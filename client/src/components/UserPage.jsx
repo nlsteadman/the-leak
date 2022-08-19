@@ -38,13 +38,13 @@ const UserPage = ({ currentUser, reviews, locations, loggedIn, updateReview, del
     <div>
       <div id="user-greeting">
         <div id="greeting">
-          <h1>Hi, { currentUser.username }! Here are your saved locations.</h1>
+          <h1>Hi, { currentUser.username }! Here are your saved locations</h1>
         </div>
       </div>
       <div>
         { myList }
       </div>
-      <div>
+      <div id="reviews">
         <h1>Your Reviews:</h1>
         { reviewCards() }
       </div>

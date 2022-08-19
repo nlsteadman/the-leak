@@ -83,6 +83,8 @@ const BookDetail = ({ loggedIn, locations, reviews, currentUser, addToList }) =>
   return (
     <div>
         <h3>{ location.name }</h3>
+        <br/>
+        <br/>
         <div id="detail-card">
             <div id="detail-location-img">
                 <img src={ location.image_url } alt="location" height="550" width="400"/>
@@ -103,6 +105,9 @@ const BookDetail = ({ loggedIn, locations, reviews, currentUser, addToList }) =>
                 <p>{ location.hours }</p>
                 { locationTypeDetails() }
             </div>
+            <br/>
+            <br/>
+            <br/>
             <div>
                 <h3 id="heading">Reviews: </h3>
                 <div id="review-cards">

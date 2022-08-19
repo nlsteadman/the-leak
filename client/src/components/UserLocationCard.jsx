@@ -89,13 +89,14 @@ const UserLocationCard = ({ loggedIn, deleteReview, review, locationTypes }) => 
   return (
     <div>
       <div id="locationcard">
-        <div id="locationname">
+        {/* <div id="locationname">
         <h2>{ review.location.name }</h2>
-        </div>
+        </div> */}
         <div id="locationimage">
             <img src={ review.location.image_url } alt="book cover" height="550" width="375" />
         </div>
         <div id="locationinfo">
+            <h2>{ review.location.name }</h2>
             <p>{ review.location.address }</p>
             <p>{ review.location.hours }</p>
             { locationTypeDisplay() }

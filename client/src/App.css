@@ -1,5 +1,40 @@
+.App {
+  text-align: center;
+}
+
 h1 {
-  font-family:'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  font-family:'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 50px;
+  margin-left: 50px;
+}
+
+h2 {
+  font-family:'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 50px;
+  margin-left: 50px;
+}
+
+h3 {
+  margin-left: 40px;
+  font-family:'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 40px;
+  padding: 40px;
+}
+
+h4 {
+  font-family:'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+
+p {
+  font-family:'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+}
+
+li {
+  font-family:'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 25px;
 }
 
 .navigation-menu ul {
@@ -43,14 +78,6 @@ h1 {
   padding-left: 15px;
 }
 
-/* #splashtitle {
-  font-family: 'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 100px;
-  color: white;
-  background-color: black;
-  text-decoration: none;
-} */
-
 #splashtitle ul {
   padding: 0;
   overflow: hidden;
@@ -74,3 +101,231 @@ h1 {
   background-color:white;
   color: black;
 }
+
+#login-form {
+  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+}
+
+#signup-form {
+  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+}
+
+input {
+  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+}
+
+button {
+  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  background-color: lightblue;
+  color: green;
+}
+
+#locationcard {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 50px;
+  margin-right: 80px;
+}
+
+#locationimage {
+  flex-basis: 20%
+}
+
+#locationinfo {
+  padding-left: 50px;
+}
+
+#locationinfo button {
+  margin-top: 30px;
+}
+
+#heading {
+  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 40px;
+  color:green;
+  margin-bottom: 20px;
+}
+
+#detail-card {
+  margin-left: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-bottom: 50px; */
+  margin-right: 80px;
+}
+
+#detail-location-img {
+  display: block;
+  margin-left: 120px;
+  margin-right: 150px;
+  width: 80%;
+}
+
+#products{
+  flex-basis: 20%;
+  padding-bottom: 40px;
+}
+
+#list-button {
+  padding-top: 100px;
+  width: 250px;
+}
+
+#detail-info {
+  padding-left: 50px;
+  padding-right: 80px;
+  padding-top: 50px;
+}
+
+#header {
+  color: lightblue;
+  outline: green double 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 115px;
+}
+
+#attribute {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+}
+
+#currentUser {
+  color: green;
+  padding-top: 10px;
+  padding-left: 15px;
+  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
+  list-style: none;
+}
+
+#welcome {
+  color:green;
+  text-align: center;
+  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 35px;
+  list-style: none;
+}
+
+#review-list {
+  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  list-style: none;
+}
+
+#author-div {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-right: 80px;
+}
+
+#author-info {
+  margin-left: 50px;
+}
+
+
+#review-cards {
+  margin-left: 50px;
+}
+
+#location-description {
+  text-align: left;
+  width: 1000px;
+  margin-left: 130px;
+}
+
+#reading-list {
+  color:rgb(234, 21, 28);
+  margin-left: 50px;
+}
+
+#user-greeting {
+  display: flex;
+  height: 125px;
+  align-items: center;
+}
+
+#user-greeting-image {
+  margin-left: 50px;
+  margin-top: 30px;
+  align-items: center;
+  justify-items: center;
+  color:green;
+}
+
+#review-card {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#review-form-title {
+  margin-left: 50px;
+  color:rgb(234, 21, 28);
+}
+
+#review-form {
+  margin-left: 50px;
+}
+
+#login-header {
+  margin-left: 50px;
+  color:green;
+}
+
+#login-form {
+  margin-left: 50px;
+}
+
+#signup-form-header {
+  margin-left: 50px;
+  color:green;
+}
+
+#signup-form {
+  margin-left: 50px;
+}
+
+#locations {
+  margin-left: 50px;
+  color:green;
+}
+
+#greeting {
+  color:green;
+  margin-left: 50px;
+}
+
+#rainbow-ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#rainbow-ul button {
+  margin: 10px;
+}
+
+#reviews {
+  margin-left: 50px;
+}
+
+#resource-links{
+  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-left: 50px;
+  list-style: none;
+  font-size: 20px;
+}
+
