@@ -4,7 +4,7 @@ import UserLocationCard from './UserLocationCard';
 import UserReviewCard from './UserReviewCard';
 
 
-const UserPage = ({ currentUser, reviews, locations, loggedIn, updateReview, deleteReview }) => {
+const UserPage = ({ currentUser, reviews, locations, loggedIn, updateReview, deleteReview, locationTypes }) => {
   const navigate = useNavigate();
   const [myReviews, setMyReviews] = useState([]);
   
@@ -24,7 +24,7 @@ const UserPage = ({ currentUser, reviews, locations, loggedIn, updateReview, del
   }, [loggedIn, currentUser.id, reviews])
 
   
-  const myList = myReviews.map(review => <UserLocationCard key={ review.id } review={ review } loggedIn={ loggedIn } deleteReview={ deleteReview } />)
+  const myList = myReviews.map(review => <UserLocationCard key={ review.id } review={ review } loggedIn={ loggedIn } deleteReview={ deleteReview } locationTypes={ locationTypes } />)
   
 
 
@@ -38,13 +38,14 @@ const UserPage = ({ currentUser, reviews, locations, loggedIn, updateReview, del
     <div>
       <div id="user-greeting">
         <div id="greeting">
-          <h1>Hi, { currentUser.username }!</h1>
+          <h1>Hi, { currentUser.username }! Here are your saved locations.</h1>
         </div>
       </div>
       <div>
         { myList }
       </div>
       <div>
+        <h1>Your Reviews:</h1>
         { reviewCards() }
       </div>
     </div>

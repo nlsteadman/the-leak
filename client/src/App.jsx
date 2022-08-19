@@ -12,6 +12,7 @@ import UserPage from "./components/UserPage";
 import Product from "./components/Product";
 import ReviewForm from "./components/ReviewForm";
 import Resources from "./components/Resources";
+import Splash from "./components/Splash";
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState({});
@@ -19,6 +20,7 @@ const App = () => {
   const [locations, setLocations] = useState([]);
   const [reviews, setReviews] = useState([]);
   const [products, setProducts] = useState([]);
+  const [locationTypes, setLocationTypes] = useState([]);
 
 
   const loginUser = user => {
@@ -83,6 +85,17 @@ const App = () => {
         .then(data => setReviews(data))
     }
 
+    if(loggedIn) {
+      fetch('/location_types', {
+        headers: {
+            ...headers,
+            ...getToken()
+        }
+      })
+        .then(r => r.json())
+        .then(data => setLocationTypes(data))
+    }
+
   }, [loggedIn])
 
   const addToList = review => {
@@ -102,12 +115,13 @@ const App = () => {
     <Router>
       <Navbar loggedIn={ loggedIn } logoutUser={ logoutUser } currentUser={ currentUser } />
         <Routes>
-          <Route path="/" element={<Home /> } />
+          <Route path="/" element={<Splash /> } />
+          <Route path="/home" element={<Home /> } />
           <Route path="/signup" element={<Signup loginUser={ loginUser } loggedIn={ loggedIn } />}/>
           <Route path="/login" element={<Login loginUser={ loginUser } loggedIn={ loggedIn } />}/>
           <Route path="/locations" element={<LocationList loggedIn={ loggedIn } locations={ locations } />}/>
           <Route path="/locations/:id" element={<LocationDetail loggedIn={ loggedIn } locations={ locations } reviews={ reviews } currentUser={ currentUser } addToList={ addToList } />}/>
-          <Route path="/users/:id" element={<UserPage loggedIn={ loggedIn } locations={ locations } reviews={ reviews } currentUser={ currentUser } updateReview={ updateReview } deleteReview={ deleteReview } />}/>
+          <Route path="/users/:id" element={<UserPage loggedIn={ loggedIn } locations={ locations } reviews={ reviews } currentUser={ currentUser } updateReview={ updateReview } deleteReview={ deleteReview } locationTypes={ locationTypes } />}/>
           <Route path="/products/:id" element={<Product loggedIn={ loggedIn } products={ products }/> } />
           <Route path="/reviews/update/:id" element={<ReviewForm loggedIn={ loggedIn } updateReview={ updateReview }/> } />
           <Route path="/resources" element={<Resources /> } />

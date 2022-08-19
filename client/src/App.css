@@ -6,34 +6,71 @@ h1 {
   padding: 0px;
   margin: 0px;
 }
-#nav ul {
+.nav ul {
     padding: 0;
     overflow: hidden;
     background-color: lightblue;
 }
-#nav li {
+.nav li {
     float: left;
     list-style-type:none;
 }
-#nav li a {
+.nav li a {
     display: inline-block;
     color: green;
     text-align: center;
     padding: 10px 20px;
     text-decoration: none;
-    font-family: "Righteous", "PT Sans", Calibri, Tahoma, sans-serif;
+    font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 30px;
     list-style: none;
     }
-#nav li a:hover {
+.nav li a:hover {
     background-color:green;
     color: lightblue;
 }
 
+#splash.navbar-custom {
+  display: none;
+  visibility: hidden;
+}
+
 #currentUser {
-  font-family: 'Righteous', Courier, monospace;
+  font-family: 'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: green;
   font-size: 30px;
   padding-top: 10px;
   padding-left: 15px;
+}
+
+/* #splashtitle {
+  font-family: 'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 100px;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+} */
+
+#splashtitle ul {
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+#splashtitle li {
+  float: left;
+  list-style-type:none;
+}
+#splashtitle li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 80px;
+  list-style: none;
+  }
+#splashtitle li a:hover {
+  background-color:white;
+  color: black;
 }

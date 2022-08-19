@@ -2,20 +2,20 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { headers, getToken } from './Globals';
 
-const UserLocationCard = ({ loggedIn, deleteReview, review }) => {
+const UserLocationCard = ({ loggedIn, deleteReview, review, locationTypes }) => {
   const navigate = useNavigate();
 
-  // const authorInfo = authors.find(author => author.id === review.book.author_id)
+  const locationTypeInfo = locationTypes.find(locationType => locationType.id === review.location.location_type_id)
 
-  // const authorDisplay = () => {
-  //   if (authorInfo) {
-  //     return (
-  //       <div>
-  //         <p>Author: { authorInfo.name }</p>
-  //       </div>
-  //     )
-  //   }
-  // }
+  const locationTypeDisplay = () => {
+    if (locationTypeInfo) {
+      return (
+        <div>
+          <p>Location type: { locationTypeInfo.org }</p>
+        </div>
+      )
+    }
+  }
       
   // const handleDone = () => {
   //   const params = {
@@ -89,16 +89,16 @@ const UserLocationCard = ({ loggedIn, deleteReview, review }) => {
   return (
     <div>
       <div id="locationcard">
+        <div id="locationname">
+        <h2>{ review.location.name }</h2>
+        </div>
         <div id="locationimage">
             <img src={ review.location.image_url } alt="book cover" height="550" width="375" />
         </div>
         <div id="locationinfo">
-            {/* <div>{ authorDisplay() }</div> */}
-            <br/>
-            <p>{ review.location.name }</p>
             <p>{ review.location.address }</p>
             <p>{ review.location.hours }</p>
-            <p>{ review.location.hours }</p>
+            { locationTypeDisplay() }
             <button onClick={ () => navigate(`/locations/${ review.location.id }`) }>Click for more</button>
             <br/>
             <div>{ deleteButton() }</div>

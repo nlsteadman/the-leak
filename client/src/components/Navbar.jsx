@@ -6,9 +6,9 @@ import leak from '../assets/leak.png';
 const Navbar = ({ loggedIn, logoutUser, currentUser }) => {
   const loggedOutLinks = () => {
     return (
-        <div id="nav">
+        <div className="nav">
             <ul>
-                <li><Link to="/">The Leak<img src={leak} alt="logo" height="25px" width="25px" />
+                <li><Link to="/home">The Leak<img src={leak} alt="logo" height="25px" width="25px" />
 </Link></li>
                 <li><Link to="/signup">Signup</Link></li>
                 <li><Link to="/login">Login</Link></li>
@@ -25,9 +25,9 @@ const handleLogout = e => {
 
 const loggedInLinks = () => {
     return (
-        <div id="nav">
+        <div className="nav">
             <ul>
-              <li><Link to="/">The Leak<img src={leak} alt="logo" height="25px" width="25px" />
+              <li><Link to="/home">The Leak<img src={leak} alt="logo" height="25px" width="25px" />
 </Link></li>
               <li><Link to="/users/:id">My page</Link></li>
               <li><Link to="/locations">Locations</Link></li>
