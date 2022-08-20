@@ -10,7 +10,7 @@ const LocationCard = ({ location }) => {
             <img src={ location.image_url } alt="location" height="450" width="400" />
         </div>
         <div id="locationinfo">
-            <p>{ location.name }</p>
+            <h3>{ location.name }</h3>
             <p>{ location.address }</p>
             <button onClick={ () => navigate(`/locations/${ location.id }`) }>Click for more</button>
         </div>

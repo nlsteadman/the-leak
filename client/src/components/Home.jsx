@@ -5,11 +5,18 @@ import leak from '../assets/leak.png';
 const Home = () => {
   return (
     <div>
-      <div>
-        <h1>The Leak</h1>
+      <div id="header">
+        <div>
+          <h1>The Leak </h1>
+        </div>
+        <div>
+          <img src={leak} alt="logo" height="90px" width="90px" />
+        </div>
       </div>
       <div>
-        <img src={leak} alt="logo" height="100px" width="100px" />
+        <p>
+          Welcome to the Leak.
+        </p>
       </div>
     </div>
   )

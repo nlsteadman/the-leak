@@ -96,14 +96,14 @@ const UserLocationCard = ({ loggedIn, deleteReview, review, locationTypes }) => 
             <img src={ review.location.image_url } alt="book cover" height="550" width="375" />
         </div>
         <div id="locationinfo">
-            <h2>{ review.location.name }</h2>
-            <p>{ review.location.address }</p>
-            <p>{ review.location.hours }</p>
-            { locationTypeDisplay() }
-            <button onClick={ () => navigate(`/locations/${ review.location.id }`) }>Click for more</button>
-            <br/>
-            <div>{ deleteButton() }</div>
-            <button onClick={ () => navigate(`/reviews/update/${ review.id }`)}>Leave a review</button>
+          <h2>{ review.location.name }</h2>
+          <p>{ review.location.address }</p>
+          <p>{ review.location.hours }</p>
+          { locationTypeDisplay() }
+          <button onClick={ () => navigate(`/locations/${ review.location.id }`) }>Click for more</button>
+          <br/>
+          <div>{ deleteButton() }</div>
+          <button onClick={ () => navigate(`/reviews/update/${ review.id }`)}>Leave a review</button>
         </div>
       </div>
     </div>

@@ -11,14 +11,11 @@ h1 {
 h2 {
   font-family:'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 50px;
-  margin-left: 50px;
 }
 
 h3 {
-  margin-left: 40px;
   font-family:'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 40px;
-  padding: 40px;
 }
 
 h4 {
@@ -37,7 +34,12 @@ li {
   font-size: 25px;
 }
 
-.navigation-menu ul {
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* .navigation-menu ul {
   padding: 0px;
   margin: 0px;
 }
@@ -63,6 +65,28 @@ li {
 .nav li a:hover {
     background-color:green;
     color: lightblue;
+} */
+
+.sidebar {
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding-top: 40px;
+  background-color: #adefd1ff;
+  }
+
+.sidebar li a {
+  color: #358597;
+  text-decoration: none;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.sidebar li a:hover {
+  background-color: #358597;
+  color: #adefd1ff;
 }
 
 #splash.navbar-custom {
@@ -72,7 +96,7 @@ li {
 
 #currentUser {
   font-family: 'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: green;
+  color: #358597;
   font-size: 30px;
   padding-top: 10px;
   padding-left: 15px;
@@ -120,8 +144,8 @@ input {
 button {
   font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 20px;
-  background-color: lightblue;
-  color: green;
+  background-color: #adefd1ff;
+  color: #358597;
 }
 
 #locationcard {
@@ -148,7 +172,7 @@ button {
 #heading {
   font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 40px;
-  color:green;
+  color:#358597;
   margin-bottom: 20px;
 }
 
@@ -185,11 +209,10 @@ button {
 }
 
 #header {
-  color: lightblue;
-  outline: green double 10px;
+  color: #358597;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   height: 115px;
 }
 
@@ -202,7 +225,7 @@ button {
 }
 
 #currentUser {
-  color: green;
+  color: #358597;
   padding-top: 10px;
   padding-left: 15px;
   font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -211,7 +234,7 @@ button {
 }
 
 #welcome {
-  color:green;
+  color:#358597;
   text-align: center;
   font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 35px;
@@ -264,7 +287,7 @@ button {
   margin-top: 30px;
   align-items: center;
   justify-items: center;
-  color:green;
+  color:#358597;
 }
 
 #review-card {
@@ -283,7 +306,7 @@ button {
 
 #login-header {
   margin-left: 50px;
-  color:green;
+  color:#358597;
 }
 
 #login-form {
@@ -292,7 +315,7 @@ button {
 
 #signup-form-header {
   margin-left: 50px;
-  color:green;
+  color:#358597;
 }
 
 #signup-form {
@@ -301,11 +324,11 @@ button {
 
 #locations {
   margin-left: 50px;
-  color:green;
+  color:#358597;
 }
 
 #greeting {
-  color:green;
+  color:#358597;
   margin-left: 50px;
 }
 
@@ -329,3 +352,6 @@ button {
   font-size: 20px;
 }
 
+#detail-location-name {
+  padding: 20px;
+}

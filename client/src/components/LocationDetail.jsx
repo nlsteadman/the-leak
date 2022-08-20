@@ -82,7 +82,7 @@ const BookDetail = ({ loggedIn, locations, reviews, currentUser, addToList }) =>
 
   return (
     <div>
-        <h3>{ location.name }</h3>
+        <h3 id="detail-location-name">{ location.name }</h3>
         <br/>
         <br/>
         <div id="detail-card">
