@@ -355,3 +355,16 @@ button {
 #detail-location-name {
   padding: 20px;
 }
+
+#home {
+  margin-left: 50px;
+}
+
+#map-container {
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+#maphome {
+  text-align: center;
+}
