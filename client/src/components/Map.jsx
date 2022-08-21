@@ -2,32 +2,33 @@ import React, { useState } from "react";
 import { GoogleMap, InfoWindow, LoadScript, Marker } from "@react-google-maps/api";
 
 const Map = () => {
+  
     
   const initialMarkers = [
-      {
-          position: {
-              lat: 45.5272874,
-              lng: -122.6929796
-          },
-          label: { color: "white", text: "William Temple House" },
-          draggable: true
+    {
+      position: {
+        lat: 45.5272874,
+        lng: -122.6929796
       },
-      {
-          position: {
-              lat: 45.5815238,
-              lng: -122.7233135
-          },
-          label: { color: "white", text: "Holy Cross Catholic Church" },
-          draggable: false
+      label: { color: "black", text: "William Temple House" },
+      draggable: true
+  },
+  {
+      position: {
+        lat: 45.5815238,
+        lng: -122.7233135
       },
-      {
-          position: {
-              lat: 45.579072,
-              lng: -122.708069
-          },
-          label: { color: "white", text: "Columbia Park Summer Free Food Market" },
-          draggable: true
+      label: { color: "black", text: "Holy Cross Catholic Church" },
+      draggable: false
+  },
+  {
+      position: {
+        lat: 45.579072,
+        lng: -122.708069
       },
+      label: { color: "black", text: "Columbia Park Summer Free Food Market" },
+      draggable: true
+    },
   ];
     
     const [activeInfoWindow, setActiveInfoWindow] = useState("");
@@ -66,30 +67,29 @@ const Map = () => {
           <GoogleMap 
             mapContainerStyle={containerStyle} 
             center={center} 
-            zoom={12}
+            zoom={10}
             onClick={mapClicked}
             id="map-container"
           >
-            {/* {markers.map((marker, index) => (
+            {markers.map((marker, index) => (
               <Marker
-                  key={index} 
-                  position={marker.position}
-                  label={marker.label}
-                  draggable={marker.draggable}
-                  onLoad={ onLoad }
-                  onDragEnd={event => markerDragEnd(event, index)}
-                  onClick={event => markerClicked(marker, index)} 
+                key={index} 
+                position={marker.position}
+                label={marker.label}
+                draggable={marker.draggable}
+                onLoad={ onLoad }
+                onDragEnd={event => markerDragEnd(event, index)}
+                onClick={() => markerClicked(marker, index)} 
               >
-                  {
-                      (activeInfoWindow === index)
-                      &&
-                      <InfoWindow position={marker.position}>
-                          <b>{marker.position.lat}, {marker.position.lng}</b>
-                      </InfoWindow>
-                  }  
+                {
+                  (activeInfoWindow === index)
+                  &&
+                  <InfoWindow position={marker.position}>
+                      <b>{marker.label}</b>
+                  </InfoWindow>
+                }  
               </Marker>
-            ))} */}
-            <Marker position={{ lat: 45.5815238, lng: -122.7233135 }} />
+            ))}
           </GoogleMap>
         </LoadScript>
     )

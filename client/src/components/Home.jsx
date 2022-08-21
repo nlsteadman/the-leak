@@ -4,6 +4,8 @@ import Map from './Map';
 
 
 const Home = () => {
+
+
   return (
     <div>
       <div id="header">
