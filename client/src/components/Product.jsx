@@ -16,7 +16,7 @@ const Product = ({ loggedIn, products }) => {
         if (product) {
             return (
                 <div>
-                    <h2>All { product.supply } locations</h2>
+                    <h2>All { product.supply } Locations</h2>
                 </div>
             )
         }
@@ -30,9 +30,10 @@ const Product = ({ loggedIn, products }) => {
 
   return (
     <div>
-        <div>
+        <div id="product-locations">
             { productInfo() }
         </div>
+        <br/>
         <div>
             { locationCards() }
         </div>

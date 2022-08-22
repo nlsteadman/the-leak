@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Resources = () => {
   return (
     <div>
-      <h1>Other Resources:</h1>
+      <h1 id="resource-title">Other Resources:</h1>
       <ul id="resource-links">
         <li><Link to="https://www.211.org/">211</Link></li>
         <li><Link to="https://period.org/">period.org</Link></li>

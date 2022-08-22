@@ -62,7 +62,7 @@ const ReviewForm = ({ loggedIn, updateReview }) => {
       <form id="review-form" onSubmit={ handleSubmit }>
         <div>
           <label htmlFor="content">Review: </label>
-          <textarea type="text" name="content" id="content" value={ content } onChange={ e => setContent(e.target.value) } />
+          <textarea type="text" name="content" id="content" cols="30" rows="5" value={ content } onChange={ e => setContent(e.target.value) } />
         </div><br/>
         <br />
         <input type="submit" value="Submit review" />

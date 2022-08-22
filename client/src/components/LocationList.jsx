@@ -16,9 +16,14 @@ const LocationList = ({ loggedIn, locations }) => {
 
 
   return (
-    <div id="location-list">
-      <h1 id="locations">Locations</h1>
-        { locationCards }
+    <div>
+      <div id="location-list">
+        <h1 id="locations">Locations</h1>
+      </div>
+      <br/>
+      <div>
+          { locationCards }
+      </div>
     </div>
   )
 }

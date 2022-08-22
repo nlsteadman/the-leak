@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom'
 const ProductLocationCard = ({ location }) => {
   const navigate = useNavigate();
 
-// const authorInfo = authors.find(author => author.id === book.author_id)
 
   return (
     <div id="locationcard">

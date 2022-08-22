@@ -31,7 +31,6 @@ p {
 
 li {
   font-family:'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 25px;
 }
 
 a {
@@ -67,7 +66,7 @@ a {
     color: lightblue;
 } */
 
-.sidebar {
+.nav {
   height: 100%;
   width: 150px;
   position: fixed;
@@ -77,19 +76,20 @@ a {
   background-color: #adefd1ff;
   }
 
-.sidebar li a {
+.nav li a {
   color: #358597;
   text-decoration: none;
   padding-left: 10px;
   margin-bottom: 20px;
+  font-size: 25px;
 }
 
-.sidebar li a:hover {
+.nav li a:hover {
   background-color: #358597;
-  color: #adefd1ff;
+  color: white;
 }
 
-#splash.sidebar {
+#splash.navbar {
   display: none;
   visibility: hidden;
 }
@@ -97,9 +97,6 @@ a {
 #currentUser {
   font-family: 'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #358597;
-  font-size: 30px;
-  padding-top: 10px;
-  padding-left: 15px;
 }
 
 #splashtitle ul {
@@ -131,21 +128,37 @@ a {
   font-size: 20px;
 }
 
+.form-space {
+  border:.5px solid #fff;
+  background:#adefd1ff;
+  border-radius:10px;
+  box-shadow:0px 0px 10px #358597;
+  box-sizing:border-box;
+  padding-bottom:1%;
+  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+}
+
 #signup-form {
   font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 20px;
 }
 
-input {
+/* input {
   font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 20px;
-}
+} */
 
 button {
   font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 20px;
   background-color: #adefd1ff;
   color: #358597;
+}
+
+button:hover {
+  background-color: #358597;
+  color: white;
 }
 
 #locationcard {
@@ -187,7 +200,7 @@ button {
 
 #detail-location-img {
   display: block;
-  margin-left: 120px;
+  margin-left: 50px;
   margin-right: 150px;
   width: 80%;
 }
@@ -297,16 +310,23 @@ button {
 
 #review-form-title {
   margin-left: 50px;
-  color:rgb(234, 21, 28);
+  color: #358597;
 }
 
 #review-form {
   margin-left: 50px;
+  margin-right: auto;
+  font-size: 30px;
+  margin: 50px;
+  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #login-header {
   margin-left: 50px;
   color:#358597;
+  display: flex;
+  height: 125px;
+  align-items: center;
 }
 
 #login-form {
@@ -316,6 +336,9 @@ button {
 #signup-form-header {
   margin-left: 50px;
   color:#358597;
+  display: flex;
+  height: 125px;
+  align-items: center;
 }
 
 #signup-form {
@@ -325,11 +348,13 @@ button {
 #locations {
   margin-left: 50px;
   color:#358597;
+  display: flex;
+  height: 125px;
+  align-items: center;
 }
 
 #greeting {
   color:#358597;
-  margin-left: 50px;
 }
 
 #rainbow-ul {
@@ -349,7 +374,12 @@ button {
   font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-left: 50px;
   list-style: none;
-  font-size: 20px;
+  font-size: 30px;
+}
+
+#resource-links li a:hover {
+  background-color: #358597;
+  color: white;
 }
 
 #detail-location-name {
@@ -367,4 +397,39 @@ button {
 
 #maphome {
   text-align: center;
+}
+
+#resource-title {
+  color: #358597;
+  display: flex;
+  height: 125px;
+  align-items: center;
+}
+
+#product-locations {
+  color: #358597;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.submit {
+  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  color: #358597;
+  background-color: #adefd1ff;
+}
+
+.submit:hover {
+  background-color: #358597;
+  color: white;
+}
+
+.form {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }

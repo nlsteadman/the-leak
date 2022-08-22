@@ -114,18 +114,18 @@ const App = () => {
   return (
     <Router>
       <Navbar loggedIn={ loggedIn } logoutUser={ logoutUser } currentUser={ currentUser } />
-        <Routes>
-          <Route path="/" element={<Splash /> } />
-          <Route path="/home" element={<Home /> } />
-          <Route path="/signup" element={<Signup loginUser={ loginUser } loggedIn={ loggedIn } />}/>
-          <Route path="/login" element={<Login loginUser={ loginUser } loggedIn={ loggedIn } />}/>
-          <Route path="/locations" element={<LocationList loggedIn={ loggedIn } locations={ locations } />}/>
-          <Route path="/locations/:id" element={<LocationDetail loggedIn={ loggedIn } locations={ locations } reviews={ reviews } currentUser={ currentUser } addToList={ addToList } />}/>
-          <Route path="/users/:id" element={<UserPage loggedIn={ loggedIn } locations={ locations } reviews={ reviews } currentUser={ currentUser } updateReview={ updateReview } deleteReview={ deleteReview } locationTypes={ locationTypes } />}/>
-          <Route path="/products/:id" element={<Product loggedIn={ loggedIn } products={ products }/> } />
-          <Route path="/reviews/update/:id" element={<ReviewForm loggedIn={ loggedIn } updateReview={ updateReview }/> } />
-          <Route path="/resources" element={<Resources /> } />
-        </Routes>
+      <Routes>
+        <Route exact path="/" element={<Splash /> } />
+        <Route path="/home" element={<Home /> } />
+        <Route path="/signup" element={<Signup loginUser={ loginUser } loggedIn={ loggedIn } />}/>
+        <Route path="/login" element={<Login loginUser={ loginUser } loggedIn={ loggedIn } />}/>
+        <Route path="/locations" element={<LocationList loggedIn={ loggedIn } locations={ locations } />}/>
+        <Route path="/locations/:id" element={<LocationDetail loggedIn={ loggedIn } locations={ locations } reviews={ reviews } currentUser={ currentUser } addToList={ addToList } />}/>
+        <Route path="/users/:id" element={<UserPage loggedIn={ loggedIn } locations={ locations } reviews={ reviews } currentUser={ currentUser } updateReview={ updateReview } deleteReview={ deleteReview } locationTypes={ locationTypes } />}/>
+        <Route path="/products/:id" element={<Product loggedIn={ loggedIn } products={ products }/> } />
+        <Route path="/reviews/update/:id" element={<ReviewForm loggedIn={ loggedIn } updateReview={ updateReview }/> } />
+        <Route path="/resources" element={<Resources /> } />
+      </Routes>
     </Router>
   );
 }

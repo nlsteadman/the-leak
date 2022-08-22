@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Splash = () => {
   return (
-    <div>
+    <div id="splash">
       <div n="container">
         <div className="particle"></div>
         <div className="particle"></div>
