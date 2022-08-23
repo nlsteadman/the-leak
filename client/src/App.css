@@ -89,10 +89,10 @@ a {
   color: white;
 }
 
-#splash.navbar {
+/* #splash.nav {
   display: none;
   visibility: hidden;
-}
+} */
 
 #currentUser {
   font-family: 'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -143,11 +143,6 @@ a {
   font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 20px;
 }
-
-/* input {
-  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-size: 20px;
-} */
 
 button {
   font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -260,20 +255,6 @@ button:hover {
   list-style: none;
 }
 
-#author-div {
-  margin-left: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 50px;
-  margin-right: 80px;
-}
-
-#author-info {
-  margin-left: 50px;
-}
-
-
 #review-cards {
   margin-left: 50px;
 }
@@ -282,11 +263,6 @@ button:hover {
   text-align: left;
   width: 1000px;
   margin-left: 130px;
-}
-
-#reading-list {
-  color:rgb(234, 21, 28);
-  margin-left: 50px;
 }
 
 #user-greeting {
@@ -432,4 +408,9 @@ button:hover {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
+}
+
+#product-link:hover {
+  background-color: #adefd1ff;
+  color: white;
 }

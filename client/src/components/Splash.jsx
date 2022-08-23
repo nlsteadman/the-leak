@@ -1,9 +1,16 @@
 import React from 'react';
 import '../style.css';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 
 const Splash = () => {
+
+  useEffect(() => {
+    document.querySelector(".nav").hidden = true
+    console.log("something")
+  })
+
   return (
     <div id="splash">
       <div n="container">

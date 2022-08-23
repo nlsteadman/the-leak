@@ -7,7 +7,7 @@ const ProductCard = ({ product }) => {
   return (
     <div>
         <ul>
-            <li><Link to={`/products/${product.id}`}>{ product.supply }</Link></li>
+            <li id="product-link"><Link to={`/products/${product.id}`}>{ product.supply }</Link></li>
         </ul>
     </div>
   )

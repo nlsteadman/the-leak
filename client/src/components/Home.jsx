@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import leak from '../assets/leak.png';
 import Map from './Map';
 
 
 const Home = () => {
 
+  useEffect(() => {
+    document.querySelector(".nav").hidden = false
+    console.log("something else")
+  })
 
   return (
     <div>
