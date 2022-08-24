@@ -10,6 +10,7 @@ const Navbar = ({ loggedIn, logoutUser, currentUser }) => {
             <ul>
                 <li><Link to="/home">The Leak<img src={leak} alt="logo" height="25px" width="25px" />
                   </Link></li>
+                <li><Link to="/locations">Locations</Link></li>
                 <li><Link to="/signup">Sign Up</Link></li>
                 <li><Link to="/login">Log In</Link></li>
                 <li><Link to="/resources">Resources</Link></li>

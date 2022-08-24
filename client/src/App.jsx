@@ -109,6 +109,7 @@ const App = () => {
   const deleteReview = review => {
     setReviews(reviews.filter(r => r.id !== review.id))
   }
+
   
   
   return (

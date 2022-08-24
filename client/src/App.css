@@ -89,11 +89,6 @@ a {
   color: white;
 }
 
-/* #splash.nav {
-  display: none;
-  visibility: hidden;
-} */
-
 #currentUser {
   font-family: 'Righteous', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   color: #358597;
@@ -103,6 +98,7 @@ a {
   padding: 0;
   overflow: hidden;
   background-color: black;
+  margin-left: -150px;
 }
 #splashtitle li {
   float: left;
@@ -413,4 +409,10 @@ button:hover {
 #product-link:hover {
   background-color: #adefd1ff;
   color: white;
+}
+
+#menu {
+  margin-left: 50px;
+  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
 }

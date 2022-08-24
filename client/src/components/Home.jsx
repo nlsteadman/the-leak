@@ -7,7 +7,6 @@ const Home = () => {
 
   useEffect(() => {
     document.querySelector(".nav").hidden = false
-    console.log("something else")
   })
 
   return (

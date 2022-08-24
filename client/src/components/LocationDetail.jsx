@@ -75,10 +75,6 @@ const BookDetail = ({ loggedIn, locations, reviews, currentUser, addToList }) =>
                 })
         }
     }
-        
-    
-    
-
 
   return (
     <div>

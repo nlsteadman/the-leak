@@ -8,7 +8,6 @@ const Splash = () => {
 
   useEffect(() => {
     document.querySelector(".nav").hidden = true
-    console.log("something")
   })
 
   return (
