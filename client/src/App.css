@@ -191,7 +191,7 @@ button:hover {
 
 #detail-location-img {
   display: block;
-  margin-left: 50px;
+  margin-left: 110px;
   margin-right: 150px;
   width: 80%;
 }
@@ -355,11 +355,19 @@ button:hover {
 }
 
 #detail-location-name {
-  padding: 20px;
+  margin-left: 50px;
+  color:#358597;
+  display: flex;
+  height: 125px;
+  align-items: center;
 }
 
 #home {
   margin-left: 50px;
+}
+
+#home-line {
+  font-size: 30px;
 }
 
 #map-container {
@@ -416,3 +424,10 @@ button:hover {
   font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 20px;
 }
+
+#home-list {
+  list-style-image: url('./assets/small.jpg');
+  font-size: 20px;
+  line-height: 30px;
+}
+

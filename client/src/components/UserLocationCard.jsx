@@ -16,31 +16,6 @@ const UserLocationCard = ({ loggedIn, deleteReview, review, locationTypes }) => 
       )
     }
   }
-      
-  // const handleDone = () => {
-  //   const params = {
-  //     review: {
-  //       finished: true
-  //     }
-  //   }
-
-  //   if (review) {
-  //     if ( loggedIn ) {
-  //       fetch("/reviews/" + review.id, {
-  //         method: "PATCH",
-  //         headers: {
-  //           ...headers,
-  //           ...getToken()
-  //         },
-  //         body: JSON.stringify(params)
-  //       })
-  //         .then(r => r.json())
-  //         .then((data) => updateReview(data))
-  //     }
-  //   }
-  // } 
-
-  
 
   const handleDelete = () => {
     if (review) {
@@ -56,24 +31,7 @@ const UserLocationCard = ({ loggedIn, deleteReview, review, locationTypes }) => 
       }
     }
   }
-  
-  
-  // const finishedButton = () => {
-  //   if (review) {
-  //     if (review.finished === false) {
-  //       return (
-  //         <div>
-  //             <button onClick={ handleDone }>Finished reading</button>
-  //         </div>
-  //       )
-  //     }
-  //     if (review.finished === true) {
-  //       return (
-  //         null
-  //       )
-  //     }
-  //   }
-  // }
+
 
   const deleteButton = () => {
     if (review) {

@@ -3,11 +3,13 @@ import leak from '../assets/leak.png';
 import Map from './Map';
 
 
-const Home = () => {
+const Home = ({ locations }) => {
 
   useEffect(() => {
     document.querySelector(".nav").hidden = false
   })
+
+  const mapLocation = locations.map(location => location)
 
   return (
     <div>
@@ -20,21 +22,24 @@ const Home = () => {
         </div>
       </div>
       <div id="home">
-        <p>
-          Welcome to the Leak, a site addressing period poverty in Portland, Oregon.
-        </p>
-        <p>
-          To find free or low cost period products, see the list and map below.
-        </p>
-        <p>
-          To save locations near you, or locations that have the types of period products you need, click Signup to create an account.
-        </p>
-        <p>
-          To see your account, click Login.
-        </p>
+        <p id="home-line">
+          Welcome to <em>the Leak</em>, a site addressing period poverty in Portland, Oregon.
+        </p><br/>
+        <ul id="home-list">
+          <li>
+            To find free or low cost period products, see the list and map below.
+          </li>
+          <li>
+            To save locations near you, or locations that have the types of period products you need, click Signup to create an account.
+          </li>
+          <li>
+            To see your account, click Login.
+          </li>
+        </ul>
       </div>
       <div id="maphome">
-        <Map />
+        {/* { mapLocation } */}
+        <Map mapLocation={ mapLocation } />
       </div>
     </div>
   )

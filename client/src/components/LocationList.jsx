@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import LocationCard from './LocationCard';
 
-const LocationList = ({ loggedIn, locations }) => {
-  const [locationType, setLocationType] = useState("");
+const LocationList = ({ locations }) => {
+  const [locationType, setLocationType] = useState("All");
   const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   if( !loggedIn ) {
-  //       navigate('/login');
-  //   }
-  // }, [loggedIn, navigate])
-
+  
   const handleChange = (e) => {
     setLocationType(e.target.value)
   }
@@ -26,8 +20,9 @@ const LocationList = ({ loggedIn, locations }) => {
       }
     }
   })
-
+    
   const locationCards = filteredLocations.map(location => <LocationCard key={ location.id } location={ location } />)
+    
   
   
   return (
@@ -48,7 +43,7 @@ const LocationList = ({ loggedIn, locations }) => {
         <br/>
         <br/>
       <div>
-          { locationCards }
+        { locationCards }
       </div>
     </div>
   )

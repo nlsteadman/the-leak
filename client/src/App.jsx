@@ -117,7 +117,7 @@ const App = () => {
       <Navbar loggedIn={ loggedIn } logoutUser={ logoutUser } currentUser={ currentUser } />
       <Routes>
         <Route exact path="/" element={<Splash /> } />
-        <Route path="/home" element={<Home /> } />
+        <Route path="/home" element={<Home locations={ locations } /> } />
         <Route path="/signup" element={<Signup loginUser={ loginUser } loggedIn={ loggedIn } />}/>
         <Route path="/login" element={<Login loginUser={ loginUser } loggedIn={ loggedIn } />}/>
         <Route path="/locations" element={<LocationList loggedIn={ loggedIn } locations={ locations } />}/>

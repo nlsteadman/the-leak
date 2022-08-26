@@ -6,7 +6,7 @@ import ReviewCard from './ReviewCard';
 import { headers, getToken } from './Globals';
 
 
-const BookDetail = ({ loggedIn, locations, reviews, currentUser, addToList }) => {
+const LocationDetail = ({ loggedIn, locations, reviews, currentUser, addToList }) => {
     const [location, setLocation] = useState({ products: [], reviews: [] });
     const [locationReviews, setLocationReviews] = useState([]);
     const { id } = useParams();
@@ -115,4 +115,4 @@ const BookDetail = ({ loggedIn, locations, reviews, currentUser, addToList }) =>
   )
 }
 
-export default BookDetail
+export default LocationDetail;
