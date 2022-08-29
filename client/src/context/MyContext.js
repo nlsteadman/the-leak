@@ -11,8 +11,6 @@ const MyProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [reviews, setReviews] = useState([]);
 
-
-
   
   const loginUser = user => {
     if (user) {

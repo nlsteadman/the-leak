@@ -9,7 +9,7 @@ const ReviewCard = ({ review }) => {
           <div>
             <ul id="rainbow-ul">
               <li>{ review.content }</li>
-              <p>- { review.user.username }</p>
+              <p style={{color:"red"}}>- { review.user.username }</p>
             </ul>
           </div>
         )

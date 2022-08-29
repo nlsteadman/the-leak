@@ -51,6 +51,7 @@ const UserPage = () => {
           <h1>Hi, { currentUser.username }! Here are your saved locations</h1>
         </div>
       </div>
+      <br/>
       <div>
         { myList }
       </div>

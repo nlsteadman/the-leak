@@ -88,34 +88,36 @@ const LocationDetail = () => {
         <h3 id="detail-location-name">{ location.name }</h3>
         <br/>
         <br/>
-        <div id="detail-card">
-            <div id="detail-location-img">
-                <img src={ location.image_url } alt="location" height="550" width="400"/>
-            </div>
-            <div>
-                <div id="products">
-                    <h3 id="heading">Products: </h3>
-                    { productCards }
+        <div id="detail-detail">
+            <div id="detail-card">
+                <div id="detail-location-img">
+                    <img src={ location.image_url } alt="location" height="550" width="400"/>
                 </div>
-                <div id="list-button">
-                    <button onClick={ handleSubmit }>Add to my list</button>
+                <div>
+                    <div id="products">
+                        <h3 id="heading">Products: </h3>
+                        { productCards }
+                    </div>
+                    <div id="list-button">
+                        <button onClick={ handleSubmit }>Add to my list</button>
+                    </div>
+                </div>
+            </div>
+            <div id="detail-info">
+                <div id="location-description">
+                    <p>{ location.address }</p>
+                    <p>{ location.hours }</p>
+                    { locationTypeDetails() }
                 </div>
             </div>
         </div>
-        <div id="detail-info">
-            <div id="location-description">
-                <p>{ location.address }</p>
-                <p>{ location.hours }</p>
-                { locationTypeDetails() }
-            </div>
-            <br/>
-            <br/>
-            <br/>
-            <div>
-                <h3 id="heading">Reviews: </h3>
-                <div id="review-cards">
-                { reviewCards }
-                </div>
+        <br/>
+        <br/>
+        <br/>
+        <div>
+            <h3 id="heading">Reviews: </h3>
+            <div id="review-cards">
+            { reviewCards }
             </div>
         </div>
     </div>
