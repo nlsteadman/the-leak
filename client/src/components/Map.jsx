@@ -11,119 +11,119 @@ const Map = ({ mapLocation }) => {
         lat: 45.5272874,
         lng: -122.6929796
       },
-      label: { color: "black", text: "William Temple House" },
+      label: { color: "red", text: "William Temple House" },
   },
   {
       position: {
         lat: 45.5815238,
         lng: -122.7233135
       },
-      label: { color: "black", text: "Holy Cross Catholic Church" },
+      label: { color: "red", text: "Holy Cross Catholic Church" },
   },
   {
       position: {
         lat: 45.579072,
         lng: -122.708069
       },
-      label: { color: "black", text: "Columbia Park Summer Free Food Market" },
+      label: { color: "red", text: "Columbia Park Summer Free Food Market" },
     },
     {
       position: {
         lat: 45.5314418,
         lng: -122.698346248638
       },
-      label: { color: "black", text: "Lift Urban / Legacy Good Samaritan Free Food Market" },
+      label: { color: "red", text: "Lift Urban / Legacy Good Samaritan Free Food Market" },
     },
     {
       position: {
         lat: 45.5314418,
         lng: -122.698346248638
       },
-      label: { color: "black", text: "Lift Urban / Legacy Good Samaritan Free Food Market" },
+      label: { color: "red", text: "Lift Urban / Legacy Good Samaritan Free Food Market" },
     },
     {
       position: {
         lat: 45.5826905,
         lng: -122.72167515
       },
-      label: { color: "black", text: "Hereford House Food Pantry" },
+      label: { color: "red", text: "Hereford House Food Pantry" },
     },
     {
       position: {
         lat: 45.553656,
         lng: -122.675855312727
       },
-      label: { color: "black", text: "Hand Up Project - People's Pantry" },
+      label: { color: "red", text: "Hand Up Project - People's Pantry" },
     },
     {
       position: {
         lat: 45.5498649,
         lng: -122.661821
       },
-      label: { color: "black", text: "NE Portland Health Center" },
+      label: { color: "red", text: "NE Portland Health Center" },
     },
     {
       position: {
         lat: 45.48585875,
         lng: -122.80245205
       },
-      label: { color: "black", text: "Beaverton Health Center" },
+      label: { color: "red", text: "Beaverton Health Center" },
     },
     {
       position: {
         lat: 45.5045205,
         lng: -122.512898926115
       },
-      label: { color: "black", text: "Hillman East Portland Center of Portland, OR" },
+      label: { color: "red", text: "Hillman East Portland Center of Portland, OR" },
     },
     {
       position: {
         lat: 45.4976882,
         lng: -122.5713911
       },
-      label: { color: "black", text: "Rosewood Family Health Center" },
+      label: { color: "red", text: "Rosewood Family Health Center" },
     },
     {
       position: {
         lat: 45.5518394250013,
         lng: -122.54172377178
       },
-      label: { color: "black", text: "Parkrose Neighborhood Health Access" },
+      label: { color: "red", text: "Parkrose Neighborhood Health Access" },
     },
     {
       position: {
         lat: 45.5236118,
         lng: -122.6777175
       },
-      label: { color: "black", text: "Old Town Recovery Center" },
+      label: { color: "red", text: "Old Town Recovery Center" },
     },
     {
       position: {
         lat: 45.5924178,
         lng: -122.7572509
       },
-      label: { color: "black", text: "North Portland Health Center" },
+      label: { color: "red", text: "North Portland Health Center" },
     },
     {
       position: {
         lat: 45.4978057,
         lng: -122.5866393
       },
-      label: { color: "black", text: "Mercy And Wisdom Healing Center" },
+      label: { color: "red", text: "Mercy And Wisdom Healing Center" },
     },
     {
       position: {
         lat: 45.5430199,
         lng: -122.6674261
       },
-      label: { color: "black", text: "Cares NW Center" },
+      label: { color: "red", text: "Cares NW Center" },
     },
     {
       position: {
         lat: 45.5590008,
         lng: -122.658118908626
       },
-      label: { color: "black", text: "North By Northeast Community Health Center" },
+      label: { color: "red", text: "North By Northeast Community Health Center" },
     },
   ];
     
@@ -168,11 +168,11 @@ const Map = ({ mapLocation }) => {
     }
 
     return (
-        <LoadScript googleMapsApiKey='AIzaSyDtor2v40-EgIX2Pg-dzcLkH_D7WjUDSTA'>
+        <LoadScript googleMapsApiKey={'AIzaSyDtor2v40-EgIX2Pg-dzcLkH_D7WjUDSTA'}>
           <GoogleMap 
             mapContainerStyle={containerStyle} 
             center={center} 
-            zoom={10}
+            zoom={11}
             onClick={mapClicked}
             id="map-container"
           >

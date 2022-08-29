@@ -1,12 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import ProductCard from './ProductCard';
 import ReviewCard from './ReviewCard';
 import { headers, getToken } from './Globals';
+import { MyContext } from '../context/MyContext';
 
 
-const LocationDetail = ({ loggedIn, locations, reviews, currentUser, addToList }) => {
+const LocationDetail = () => {
+    const {locations} = useContext(MyContext);
+    const {loggedIn} = useContext(MyContext);
+    const {reviews} = useContext(MyContext);
+    const {currentUser} = useContext(MyContext);
+    const {addToList} = useContext(MyContext);
+
     const [location, setLocation] = useState({ products: [], reviews: [] });
     const [locationReviews, setLocationReviews] = useState([]);
     const { id } = useParams();

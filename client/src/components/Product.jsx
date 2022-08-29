@@ -1,8 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import ProductLocationCard from './ProductLocationCard';
+import { MyContext } from '../context/MyContext';
 
-const Product = ({ loggedIn, products }) => {
+const Product = () => {
+    const {loggedIn} = useContext(MyContext);
+    const {products} = useContext(MyContext);
+
     const { id } = useParams()
     const [product, setProducts] = useState({ locations: [] });
 

@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import LocationCard from './LocationCard';
+import { MyContext } from '../context/MyContext';
 
-const LocationList = ({ locations }) => {
+const LocationList = () => {
+  const {locations} = useContext(MyContext);
+
   const [locationType, setLocationType] = useState("All");
   const navigate = useNavigate();
   

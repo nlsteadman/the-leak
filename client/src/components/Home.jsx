@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useContext } from 'react';
 import leak from '../assets/leak.png';
 import Map from './Map';
+import { MyContext } from '../context/MyContext';
 
 
-const Home = ({ locations }) => {
+const Home = () => {
+  const {locations} = useContext(MyContext);
 
   useEffect(() => {
     document.querySelector(".nav").hidden = false
@@ -38,7 +40,6 @@ const Home = ({ locations }) => {
         </ul>
       </div>
       <div id="maphome">
-        {/* { mapLocation } */}
         <Map mapLocation={ mapLocation } />
       </div>
     </div>

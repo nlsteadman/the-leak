@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import leak from '../assets/leak.png';
+import { MyContext } from '../context/MyContext';
 
 
-const Navbar = ({ loggedIn, logoutUser, currentUser }) => {
+const Navbar = () => {
+  const {loggedIn} = useContext(MyContext);
+  const {logoutUser} = useContext(MyContext);
+  const {currentUser} = useContext(MyContext);
+
   const loggedOutLinks = () => {
     return (
         <nav className="nav">

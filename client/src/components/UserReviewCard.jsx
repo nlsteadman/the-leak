@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { headers, getToken } from './Globals';
+import { MyContext } from '../context/MyContext';
 
-const UserReviewCard = ({ review, locations, updateReview, loggedIn }) => {
+const UserReviewCard = ({ review }) => {
+  const {locations} = useContext(MyContext);
+  const {updateReview} = useContext(MyContext);
+  const {loggedIn} = useContext(MyContext);
+
   const [content, setContent] = useState("");
   const navigate = useNavigate();
 

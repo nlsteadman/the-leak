@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { headers, getToken } from './Globals';
+import { MyContext } from '../context/MyContext';
 
 
-const ReviewForm = ({ loggedIn, updateReview }) => {
+const ReviewForm = () => {
+  const {loggedIn} = useContext(MyContext);
+  const {updateReview} = useContext(MyContext);
+
   const [content, setContent] = useState("");
   const [review, setReview] = useState([]);
   const navigate = useNavigate();

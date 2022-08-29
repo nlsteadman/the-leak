@@ -1,10 +1,20 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import UserLocationCard from './UserLocationCard';
 import UserReviewCard from './UserReviewCard';
+import { MyContext } from '../context/MyContext';
 
 
-const UserPage = ({ currentUser, reviews, locations, loggedIn, updateReview, deleteReview, locationTypes }) => {
+const UserPage = () => {
+  const {currentUser} = useContext(MyContext);
+  const {reviews} = useContext(MyContext);
+  const {locations} = useContext(MyContext);
+  const {loggedIn} = useContext(MyContext);
+  const {updateReview} = useContext(MyContext);
+  const {deleteReview} = useContext(MyContext);
+  const {locationTypes} = useContext(MyContext);
+
+
   const navigate = useNavigate();
   const [myReviews, setMyReviews] = useState([]);
   

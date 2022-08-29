@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { headers } from './Globals';
 import { useNavigate } from 'react-router-dom';
+import { MyContext } from '../context/MyContext';
 
 
-const Signup = ({ loginUser, loggedIn }) => {
+const Signup = () => {
+  const {loginUser} = useContext(MyContext);
+  const {loggedIn} = useContext(MyContext);
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
