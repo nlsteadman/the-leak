@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../style.css';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import { MyContext } from '../context/MyContext';
 
 
 const Splash = () => {
+  const {loggedIn} = useContext(MyContext);
 
   useEffect(() => {
-    document.querySelector(".nav").hidden = true
+    if (loggedIn || !loggedIn) {
+      document.querySelector(".nav").hidden = true
+    }
   })
 
   return (

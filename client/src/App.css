@@ -115,7 +115,7 @@ a {
   list-style: none;
   }
 #splashtitle li a:hover {
-  background-color:white;
+  background-color:rgb(247, 239, 239);
   color: black;
 }
 
@@ -446,3 +446,6 @@ button:hover {
   line-height: 30px;
 }
 
+/* .gm-style-iw-d div {
+  background-color: red;
+} */
