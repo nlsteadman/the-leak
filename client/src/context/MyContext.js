@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { headers, getToken } from '../components/Globals';
+import { headers, getToken, baseUrl } from '../components/Globals';
 
 const MyContext = React.createContext();
 
@@ -32,7 +32,7 @@ const MyProvider = ({ children }) => {
   useEffect(() => {
     const token = localStorage.getItem('jwt')
     if(token && !loggedIn) {
-      fetch('/get-current-user', {
+      fetch(baseUrl + '/get-current-user', {
         method: "GET",
         headers: {
           ...headers,
@@ -43,7 +43,7 @@ const MyProvider = ({ children }) => {
         .then(user => loginUser(user))
     }
 
-    fetch('/locations', {
+    fetch(baseUrl + '/locations', {
       headers: {
         ...headers,
         ...getToken()
