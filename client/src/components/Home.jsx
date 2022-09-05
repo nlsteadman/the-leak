@@ -29,13 +29,16 @@ const Home = () => {
         </p><br/>
         <ul id="home-list">
           <li>
-            To find free or low cost period products, see the list and map below.
+            To find free or low cost period products, see the map below or the Locations page.
           </li>
           <li>
             To save locations near you, or locations that have the types of period products you need, click Signup to create an account.
           </li>
           <li>
             To see your account, click Login.
+          </li>
+          <li>
+            For more information about period poverty and resources around the web, see the Resources page.
           </li>
         </ul>
       </div>

@@ -132,12 +132,12 @@ const Map = ({ mapLocation }) => {
     
 
     const containerStyle = {
-        width: "60%",
+        width: "80%",
         height: "400px",
     }
 
     const center = {
-        lat: 45.5152,
+        lat: 45.5400,
         lng: -122.6784,
     }
 
