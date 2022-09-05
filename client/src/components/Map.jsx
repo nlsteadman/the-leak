@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { GoogleMap, InfoWindow, LoadScript, MarkerF } from "@react-google-maps/api";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { MyContext } from '../context/MyContext';
+import { useEffect } from "react";
+
 
 const Map = ({ mapLocation }) => {
+  const {locations} = useContext(MyContext);
   const navigate = useNavigate();
 
     
@@ -35,13 +40,6 @@ const Map = ({ mapLocation }) => {
         lng: -122.698346248638
       },
     },
-    // {
-    //   position: {
-    //     lat: 45.5314418,
-    //     lng: -122.698346248638
-    //   },
-    //   label: { color: "red", text: "Lift Urban / Legacy Good Samaritan Free Food Market" },
-    // },
     {
       name: "Hereford House Food Pantry",
       position: {
@@ -130,6 +128,8 @@ const Map = ({ mapLocation }) => {
     
     const [activeInfoWindow, setActiveInfoWindow] = useState("");
     const [markers, setMarkers] = useState(initialMarkers);
+    const [activeLocation, setActiveLocation] = useState();
+    
 
     const containerStyle = {
         width: "60%",
@@ -141,17 +141,6 @@ const Map = ({ mapLocation }) => {
         lng: -122.6784,
     }
 
-    // useEffect(() => {
-    //   if (activeInfoWindow) {
-    //     displayValue = (
-    //       <InfoWindow 
-    //         onLoad={onLoad}
-    //       >
-    //         <p>{activeInfoWindow.name}</p>
-    //       </InfoWindow>
-    //     )
-    //   }
-    // }, [activeInfoWindow])
     
     const handleActiveMarker = (marker) => {
       if (marker === activeInfoWindow) {
@@ -162,31 +151,20 @@ const Map = ({ mapLocation }) => {
         )
     }
 
-    const displayValue = (marker) => {
-      console.log(activeInfoWindow)
-      return (
-        <InfoWindow 
-            onLoad={onLoad}
-          >
-            <p>{marker.name}</p>
-          </InfoWindow>
-        )
-    }
-
-    // const mapId = () => {
-    //   if (initialMarkers.label) {
-    //     if (initialMarkers.label.text.toString() === mapLocation.name) {
-    //       return mapLocation.id
-    //     }
-    //   }
-    // }
+    
 
     const onLoad = infoWindow => {
-      // debugger
       console.log('infoWindow: ', infoWindow)
     }
 
     
+
+    const variable = 
+      locations.find(location => {
+        if (activeInfoWindow.name === location.name) {
+          return (location.id)
+        }
+      })
 
     return (
         <LoadScript googleMapsApiKey={'AIzaSyDtor2v40-EgIX2Pg-dzcLkH_D7WjUDSTA'}>
@@ -207,7 +185,7 @@ const Map = ({ mapLocation }) => {
                   <InfoWindow 
                     onLoad={onLoad}
                     >
-                      <div>{marker.name}</div>
+                      <div><Link to={`/locations/${variable.id}`}>{marker.name}</Link></div>
                   </InfoWindow>
                   ) : null
                 }  

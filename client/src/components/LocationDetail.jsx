@@ -19,18 +19,12 @@ const LocationDetail = () => {
     const { id } = useParams();
     const navigate = useNavigate();
 
-    useEffect(() => {
-        if( !loggedIn ) {
-            navigate('/login');
-        }
-    }, [loggedIn, navigate])
-
 
     useEffect(() => {
-        if( loggedIn ) {
+        if( locations ) {
             setLocation(locations.find(location => location.id.toString() === id));
         }
-    }, [loggedIn, locations, id])
+    }, [locations, id])
 
     useEffect(() => {
         if (reviews) {
