@@ -52,8 +52,7 @@ const MyProvider = ({ children }) => {
       .then(r => r.json())
       .then(data => setLocations(data))
 
-    if(loggedIn) {
-      fetch('/products', {
+      fetch(baseUrl + '/products', {
         headers: {
           ...headers,
           ...getToken()
@@ -61,10 +60,9 @@ const MyProvider = ({ children }) => {
       })
         .then(r => r.json())
         .then(data => setProducts(data))
-    }  
+    
 
-    if(loggedIn) {
-      fetch('/reviews', {
+      fetch(baseUrl + '/reviews', {
         headers: {
             ...headers,
             ...getToken()
@@ -72,10 +70,8 @@ const MyProvider = ({ children }) => {
       })
         .then(r => r.json())
         .then(data => setReviews(data))
-    }
 
-    if(loggedIn) {
-      fetch('/location_types', {
+      fetch(baseUrl + '/location_types', {
         headers: {
             ...headers,
             ...getToken()
@@ -83,7 +79,7 @@ const MyProvider = ({ children }) => {
       })
         .then(r => r.json())
         .then(data => setLocationTypes(data))
-    }
+    
   }, [loggedIn])
 
   const addToList = review => {
