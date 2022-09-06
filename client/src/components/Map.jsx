@@ -20,7 +20,7 @@ const Map = ({ mapLocation }) => {
       },
     },
     {
-      name: "Holy Cross Catholic Church",
+      name: "SVDP Blessed Frederic at Holy Cross",
       position: {
         lat: 45.5815238,
         lng: -122.7233135
@@ -142,16 +142,14 @@ const Map = ({ mapLocation }) => {
 
     
     const handleActiveMarker = (marker) => {
-      console.log(marker)
-      console.log(activeInfoWindow)
       setActiveInfoWindow(marker)
     }
 
     
 
-    const onLoad = infoWindow => {
-      console.log('infoWindow: ', infoWindow)
-    }
+    // const onLoad = infoWindow => {
+    //   console.log('infoWindow: ', infoWindow)
+    // }
 
     
 
