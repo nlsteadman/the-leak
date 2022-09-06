@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { headers } from './Globals';
+import { baseUrl, headers } from './Globals';
 import { useNavigate } from 'react-router-dom';
 import { MyContext } from '../context/MyContext';
 
@@ -26,7 +26,7 @@ const Login = () => {
       password
     }
 
-    fetch('/login', {
+    fetch(baseUrl + '/login', {
       method: "POST",
       headers,
       body: JSON.stringify(params)

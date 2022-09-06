@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import ProductCard from './ProductCard';
 import ReviewCard from './ReviewCard';
-import { headers, getToken } from './Globals';
+import { headers, getToken, baseUrl } from './Globals';
 import { MyContext } from '../context/MyContext';
 
 
@@ -61,7 +61,7 @@ const LocationDetail = () => {
                 }
             }
     
-            fetch('/reviews', {
+            fetch(baseUrl + '/reviews', {
                 method: "POST",
                 headers: {
                     ...headers,

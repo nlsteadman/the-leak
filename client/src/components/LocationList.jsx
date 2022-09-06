@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react'
-import { useNavigate } from 'react-router-dom'
 import LocationCard from './LocationCard';
 import { MyContext } from '../context/MyContext';
 
@@ -7,7 +6,6 @@ const LocationList = () => {
   const {locations} = useContext(MyContext);
 
   const [locationType, setLocationType] = useState("All");
-  const navigate = useNavigate();
   
   const handleChange = (e) => {
     setLocationType(e.target.value)

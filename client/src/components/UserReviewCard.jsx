@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { headers, getToken } from './Globals';
+import { headers, getToken, baseUrl } from './Globals';
 import { MyContext } from '../context/MyContext';
 
 const UserReviewCard = ({ review }) => {
@@ -22,7 +22,7 @@ const UserReviewCard = ({ review }) => {
     }
     
     if (loggedIn) {
-      fetch("/reviews/" + review.id, {
+      fetch(baseUrl + "/reviews/" + review.id, {
         method: "PATCH",
         headers: {
           ...headers,

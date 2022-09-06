@@ -4,17 +4,16 @@ import ProductLocationCard from './ProductLocationCard';
 import { MyContext } from '../context/MyContext';
 
 const Product = () => {
-    const {loggedIn} = useContext(MyContext);
     const {products} = useContext(MyContext);
 
     const { id } = useParams()
     const [product, setProducts] = useState({ locations: [] });
 
     useEffect(() => {
-        if (loggedIn) {
+        if (products) {
             setProducts(products.find(product => product.id.toString() === id));
         }
-    }, [loggedIn, products, id])
+    }, [products, id])
     
     const productInfo = () => {
         if (product) {

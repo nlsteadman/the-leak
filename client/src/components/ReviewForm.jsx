@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { headers, getToken } from './Globals';
+import { headers, getToken, baseUrl } from './Globals';
 import { MyContext } from '../context/MyContext';
 
 
@@ -21,7 +21,7 @@ const ReviewForm = () => {
   }, [loggedIn, navigate])
 
   useEffect(() => {
-    fetch("/reviews/" + id.id)
+    fetch(baseUrl + "/reviews/" + id.id)
       .then(r => r.json())
       .then(review => setReview(review))
   }, []);
