@@ -6,11 +6,11 @@ const Resources = () => {
     <div>
       <h1 id="resource-title">Other Resources:</h1>
       <ul id="resource-links">
-        <li><Link to="https://www.211.org/">211</Link></li>
-        <li><Link to="https://period.org/">period.org</Link></li>
-        <li><Link to="https://foodfinder.oregonfoodbank.org/">oregonfoodbank.org</Link></li>
-        <li><Link to="https://www.plannedparenthood.org/">plannedparenthood.org</Link></li>
-        <li><Link to="https://www.freeclinics.com/">freeclinics.com</Link></li>
+        <li><a href="https://www.211.org/" target="_blank">211</a></li>
+        <li><a href="https://period.org/" target="_blank">period.org</a></li>
+        <li><a href="https://foodfinder.oregonfoodbank.org/" target="_blank">oregonfoodbank.org</a></li>
+        <li><a href="https://www.plannedparenthood.org/" target="_blank">plannedparenthood.org</a></li>
+        <li><a href="https://www.freeclinics.com/" target="_blank">freeclinics.com</a></li>
       </ul>
     </div>
   )

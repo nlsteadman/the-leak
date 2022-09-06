@@ -128,7 +128,6 @@ const Map = ({ mapLocation }) => {
     
     const [activeInfoWindow, setActiveInfoWindow] = useState("");
     const [markers, setMarkers] = useState(initialMarkers);
-    const [activeLocation, setActiveLocation] = useState();
     
 
     const containerStyle = {
@@ -143,12 +142,9 @@ const Map = ({ mapLocation }) => {
 
     
     const handleActiveMarker = (marker) => {
-      if (marker === activeInfoWindow) {
-        return;
-      }
-      return (
-        setActiveInfoWindow(marker)
-        )
+      console.log(marker)
+      console.log(activeInfoWindow)
+      setActiveInfoWindow(marker)
     }
 
     
@@ -183,7 +179,7 @@ const Map = ({ mapLocation }) => {
                 {
                   (activeInfoWindow === marker) ? (
                   <InfoWindow 
-                    onLoad={onLoad}
+                    // onLoad={onLoad}
                     >
                       <div><Link to={`/locations/${variable.id}`}>{marker.name}</Link></div>
                   </InfoWindow>
