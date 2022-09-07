@@ -25,7 +25,7 @@ const UserLocationCard = ({ review }) => {
   const handleDelete = () => {
     if (review) {
       if ( loggedIn ) {
-        fetch(baseUrl + "/reviews/" + review.id, {
+        fetch("/reviews/" + review.id, {
           method: "DELETE",
           headers: {
             ...headers,

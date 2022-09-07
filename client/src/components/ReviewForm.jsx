@@ -21,7 +21,7 @@ const ReviewForm = () => {
   }, [loggedIn, navigate])
 
   useEffect(() => {
-    fetch(baseUrl + "/reviews/" + id.id)
+    fetch("/reviews/" + id.id)
       .then(r => r.json())
       .then(review => setReview(review))
   }, []);

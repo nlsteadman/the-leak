@@ -26,7 +26,7 @@ const Login = () => {
       password
     }
 
-    fetch(baseUrl + '/login', {
+    fetch('/login', {
       method: "POST",
       headers,
       body: JSON.stringify(params)

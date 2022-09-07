@@ -32,7 +32,7 @@ const MyProvider = ({ children }) => {
   useEffect(() => {
     const token = localStorage.getItem('jwt')
     if(token && !loggedIn) {
-      fetch(baseUrl + '/get-current-user', {
+      fetch('/get-current-user', {
         method: "GET",
         headers: {
           ...headers,
@@ -43,7 +43,7 @@ const MyProvider = ({ children }) => {
         .then(user => loginUser(user))
     }
 
-    fetch(baseUrl + '/locations', {
+    fetch('/locations', {
       headers: {
         ...headers,
         ...getToken()
@@ -52,7 +52,7 @@ const MyProvider = ({ children }) => {
       .then(r => r.json())
       .then(data => setLocations(data))
 
-      fetch(baseUrl + '/products', {
+      fetch('/products', {
         headers: {
           ...headers,
           ...getToken()
@@ -62,7 +62,7 @@ const MyProvider = ({ children }) => {
         .then(data => setProducts(data))
     
 
-      fetch(baseUrl + '/reviews', {
+      fetch('/reviews', {
         headers: {
             ...headers,
             ...getToken()
@@ -71,7 +71,7 @@ const MyProvider = ({ children }) => {
         .then(r => r.json())
         .then(data => setReviews(data))
 
-      fetch(baseUrl + '/location_types', {
+      fetch('/location_types', {
         headers: {
             ...headers,
             ...getToken()

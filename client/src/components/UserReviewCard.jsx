@@ -22,7 +22,7 @@ const UserReviewCard = ({ review }) => {
     }
     
     if (loggedIn) {
-      fetch(baseUrl + "/reviews/" + review.id, {
+      fetch("/reviews/" + review.id, {
         method: "PATCH",
         headers: {
           ...headers,

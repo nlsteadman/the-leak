@@ -61,7 +61,7 @@ const LocationDetail = () => {
                 }
             }
     
-            fetch(baseUrl + '/reviews', {
+            fetch('/reviews', {
                 method: "POST",
                 headers: {
                     ...headers,
