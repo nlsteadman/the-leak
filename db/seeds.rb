@@ -60,7 +60,7 @@ Location.create(
   name: 'Hereford House Food Pantry',
   address: '7704 N Hereford Ave, Portland, OR 97203',
   hours: 'Fri - Sat: 12 pm - 2 pm',
-  image_url: 'http://www.herefordhousepdx.org/wp-content/uploads/2015/08/Hereford-House-Sign-293x300.jpg',
+  image_url: 'http://www.herefordhousepdx.org/wp-content/uploads/2013/04/size_550x415_HH_Logo-copy.png',
   location_type_id: LocationType.second.id
 )
 
@@ -166,5 +166,6 @@ end
     product_id: rand(Product.first.id..Product.last.id)
   )
 end
+
 
 puts "✅ Done seeding!"
