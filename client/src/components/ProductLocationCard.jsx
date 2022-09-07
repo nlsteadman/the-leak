@@ -11,6 +11,7 @@ const ProductLocationCard = ({ location }) => {
             <img src={ location.image_url } alt="location" height="450" width="300" />
         </div>
         <div id="locationinfo">
+            <h3>{ location.name }</h3>
             <p>{ location.address }</p>
             <p>{ location.hours }</p>
             <p>{ location.org }</p>
