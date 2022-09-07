@@ -181,6 +181,13 @@ button:hover {
   font-size: 40px;
   color:#358597;
   margin-bottom: 20px;
+}
+
+#review-heading {
+  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 40px;
+  color:#358597;
+  margin-bottom: 20px;
   margin-left: 50px;
 }
 
@@ -357,11 +364,16 @@ button:hover {
   margin-left: 50px;
 }
 
-#resource-links{
+#resource-links {
   font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-left: 50px;
-  list-style: none;
+  list-style: decimal;
   font-size: 30px;
+  color: #358597;
+}
+
+#resource-links li {
+  padding: 10px;
 }
 
 #resource-links li a:hover {
@@ -444,4 +456,29 @@ button:hover {
   list-style-image: url('./assets/small.jpg');
   font-size: 20px;
   line-height: 30px;
+}
+
+#instruction {
+  margin-left: 50px;
+  color: red;
+  padding: 20px;
+  text-align: center;
+}
+
+#sub-greeting {
+  font-size: 40px;
+  padding: 50px;
+  color: navy;
+}
+
+#input {
+  font-family: "Righteous", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  color: #358597;
+  background-color: #adefd1ff;
+}
+
+#input:hover {
+  background-color: #358597;
+  color: white;
 }

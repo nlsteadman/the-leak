@@ -109,7 +109,7 @@ const LocationDetail = () => {
         <br/>
         <br/>
         <div>
-            <h3 id="heading">Reviews: </h3>
+            <h3 id="review-heading">Reviews: </h3>
             <div id="review-cards">
             { reviewCards }
             </div>

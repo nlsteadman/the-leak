@@ -36,6 +36,22 @@ const UserPage = () => {
   
   const myList = myReviews.map(review => <UserLocationCard key={ review.id } review={ review } loggedIn={ loggedIn } deleteReview={ deleteReview } locationTypes={ locationTypes } />)
   
+  const toBeAdded = () => {
+      if (myList.length === 0) {
+        return (
+          <div>
+            <h4 id="sub-greeting">No saved locations yet? <button onClick={() => navigate('/locations')}>Start here!</button></h4>
+          </div>
+        )
+      }
+      if (myList.length > 0) {
+        return (
+          <div>
+            { myList }
+          </div>
+        ) 
+      }
+  }
 
 
   const reviewCards = () => {
@@ -48,12 +64,12 @@ const UserPage = () => {
     <div>
       <div id="user-greeting">
         <div id="greeting">
-          <h1>Hi, { currentUser.username }! Here are your saved locations</h1>
+          <h1>Hi, { currentUser.username }! Here are your saved locations: </h1>
         </div>
       </div>
       <br/>
       <div>
-        { myList }
+        { toBeAdded() }
       </div>
       <div id="reviews">
         <h1>Your Reviews:</h1>

@@ -42,6 +42,9 @@ const Home = () => {
           </li>
         </ul>
       </div>
+      <div id="instruction">
+        <p>Hover over a marker and click the location name to learn more about each location</p>
+      </div>
       <div id="maphome">
         <Map mapLocation={ mapLocation } />
       </div>

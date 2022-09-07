@@ -69,7 +69,7 @@ const ReviewForm = () => {
           <textarea type="text" name="content" id="content" cols="30" rows="5" value={ content } onChange={ e => setContent(e.target.value) } />
         </div><br/>
         <br />
-        <input type="submit" value="Submit review" />
+        <input id="input" type="submit" value="Submit review" />
       </form><br/><br/>
     </div>
   )

@@ -44,7 +44,7 @@ const UserReviewCard = ({ review }) => {
           <div id="review-card">
             <ul id="rainbow-ul">
               <li>{ review.content }</li>
-              <p>- { locationInfo.name }</p>
+              <p style={{color:"red"}}>- { locationInfo.name }</p>
               <button onClick={ () => navigate(`/reviews/update/${ review.id }`) }>Change Review</button>
               <button onClick={ handleUpdate } >Delete Review</button>
             </ul>
