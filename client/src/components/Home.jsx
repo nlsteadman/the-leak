@@ -11,7 +11,6 @@ const Home = () => {
     document.querySelector(".nav").hidden = false
   })
 
-  const mapLocation = locations.map(location => location)
 
   return (
     <div>
@@ -46,7 +45,7 @@ const Home = () => {
         <p>Hover over a marker and click the location name to learn more about each location</p>
       </div>
       <div id="maphome">
-        <Map mapLocation={ mapLocation } />
+        <Map />
       </div>
     </div>
   )

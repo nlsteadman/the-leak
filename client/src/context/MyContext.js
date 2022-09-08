@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { headers, getToken, baseUrl } from '../components/Globals';
+import { headers, getToken } from '../components/Globals';
 
 const MyContext = React.createContext();
 

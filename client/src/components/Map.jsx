@@ -1,14 +1,11 @@
 import React, { useState, useContext } from "react";
 import { GoogleMap, InfoWindow, LoadScript, MarkerF } from "@react-google-maps/api";
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { MyContext } from '../context/MyContext';
-import { useEffect } from "react";
 
 
-const Map = ({ mapLocation }) => {
+const Map = () => {
   const {locations} = useContext(MyContext);
-  const navigate = useNavigate();
 
     
   const initialMarkers = [
@@ -145,11 +142,7 @@ const Map = ({ mapLocation }) => {
       setActiveInfoWindow(marker)
     }
 
-    
-
-    // const onLoad = infoWindow => {
-    //   console.log('infoWindow: ', infoWindow)
-    // }
+  
 
     
 
@@ -177,7 +170,6 @@ const Map = ({ mapLocation }) => {
                 {
                   (activeInfoWindow === marker) ? (
                   <InfoWindow 
-                    // onLoad={onLoad}
                     >
                       <div><Link to={`/locations/${variable.id}`}>{marker.name}</Link></div>
                   </InfoWindow>

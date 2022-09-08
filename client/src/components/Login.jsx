@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { baseUrl, headers } from './Globals';
+import { headers } from './Globals';
 import { useNavigate } from 'react-router-dom';
 import { MyContext } from '../context/MyContext';
 
